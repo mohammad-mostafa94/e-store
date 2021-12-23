@@ -7,8 +7,10 @@ app.use(express.json());
 
 // all routes import here
 const products = require("./routes/product");
+const auth = require('./routes/auth');
 
 app.use("/api/v1", products);
+app.use("/api/v1", auth);
 
 // middleware handle errors
 app.use(errorMiddleware);
